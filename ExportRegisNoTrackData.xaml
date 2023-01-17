@@ -1,0 +1,437 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExportRegisNoTrackData" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1196,8386" sap2010:WorkflowViewState.IdRef="ExportRegisNoTrackData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExportRegisNoTrackData" sap:VirtualizedContainerService.HintSize="1034,8321" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
+      <Variable x:TypeArguments="x:String" Name="downloadPathRegisNoTrack" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="992,8233" sap2010:WorkflowViewState.IdRef="Sequence_33">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="930,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[downloadPathRegisNoTrack]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\DownloadRawData\Registrasi\NoTrack</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="930,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[downloadPathRegisNoTrack]" />
+      <ui:ForEachFileX sap2010:Annotation.AnnotationText="Menghapus semua raw file yang sudah ada di folder download" DisplayName="For Each File in Folder" Folder="[downloadPathRegisNoTrack]" sap:VirtualizedContainerService.HintSize="930,986" sap2010:WorkflowViewState.IdRef="ForEachFileX_4" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+        <ui:ForEachFileX.Body>
+          <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,705" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:FileExistsX DisplayName="File Exists" Exists="[fileExists]" sap:VirtualizedContainerService.HintSize="478,133" sap2010:WorkflowViewState.IdRef="FileExistsX_3" Path="[CurrentFile.FullName]" />
+              <If Condition="[fileExists = true]" sap:VirtualizedContainerService.HintSize="478,444" sap2010:WorkflowViewState.IdRef="If_3">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="400,168" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="358,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="[CurrentFile.FullName]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachFileX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachFileX>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Login Staff Binus Enrichment" sap:VirtualizedContainerService.HintSize="930,5195" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="896,4978" sap2010:WorkflowViewState.IdRef="Sequence_28">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="email" />
+                <Variable x:TypeArguments="x:String" Name="password" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT login_Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Text="UserRPAKmg" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/Login/Staff/Login" DesignTimeRectangle="857, 540, 270, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT login_Username'" FullSelectorArgument="&lt;webctrl id='login_Username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login_Username' tag='INPUT' type='text' class='form-cont' aaname='' /&gt;" Guid="807153ef-b3b7-4973-abef-cab82d0010f3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAsCAYAAACpMDdKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMJSURBVHhe7dzNa9NgHMBx/y49+ILoRS96ED0oePGmoMSRyw5jbIcenDBBcFXKTlJQYYqFTZ1zg3UyRHqIbr7sDUbdJpJOccbtZ540ie2szubJXrJ8P/CD5smSW74k7cgeAQBNhASAtjAkxWKRYRimqQnUhQQA/hchAaCNkADQRkgAaCMkALQREgDaCAkAbYQEgDZCAiTc8ssxqYy8iDTq2DgQEiCh7OEhmbl6WayD+8Q6sDfauMeqc6io6CAkQAKt/ViRmSsXG8chwky751LnjIqQAAlUGRpsGASdUeeMipAACfTl8aOGMdAZdc6oCAmQQIRkE5T7M2L0lvwtYPeLKyQfL5wPP297SEq9hhjG+snJpl3aVl7MTEHK/iYhQdrEFRJncUE+nDvjfd4RIcn0B5f11iMkSJu4QqIkJCQlybl3J8XZ55JtN727FbM9KyPztkz1Z6XNVHcvprTe6JOpb/4hLrt0X7o7qn9vtJiSuWdJuLuUEyMzwB0JUqs2JO/PnpZPt26G22omTx6XhdxtmTh2JFx7e/SQLNzpkXenToRrSoJC4sbjekHmvrubq7ZYdzvdOBjS9WBSbMddc+akcM2Qzodz3hGKM23J5Ge102Vbku8wJBe0gpAg5YKQvDm8X2RtzVuznz0JA+EsLnprX1+/CteWx0a9tZ+VSri2Mjuzs0JS//2IO+GFXQ1JGAFlviCdRlaKKiy+jWJQFytCgpRrGJLBp2EgEhuSf9+RZGSgdnd5QDLrvoytj4EjS+N56WrzH238ISRAVRASNSl6tGkyJFZeWlu6pG/CdpNSxR0J8FttSHRG2bUh+TMMjhR7CAkQiCskCfr5t/mQOONZMTryYtnuxqoj5dGc9+sOIQGq4gpJgv4hLcKjzeqSFHvbxFTn8X/6LQ93ExLAF1dIamfbQwJgaxESANp4jQAAbdUXG11qGIQoo16SxIuNgBTiVYsAYsPLnwHsCoQEgDZCAkAbIQGgjZAA0EZIAGgjJAC0ERIA2v4aEoZhmGYmEIYEAKIiJAA0ifwCqkz1zk6M6l8AAAAASUVORK5CYII=" InformativeScreenshot="df105385c95c4b5d690c65bf8fc9478b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login Staff Binus Enrichment' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT login_Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Text="123456" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/Login/Staff/Login" DesignTimeRectangle="857, 621, 270, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT login_Password'" FullSelectorArgument="&lt;webctrl id='login_Password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login_Password' tag='INPUT' type='password' class='input-form' aaname='' /&gt;" Guid="48b0f741-aec0-41f2-994b-65c004a75c5c" ImageBase64="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" InformativeScreenshot="d6d203a3f867851d9151276fcf001986.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login Staff Binus Enrichment' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="854,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/Login/Staff/Login" DesignTimeRectangle="857, 681, 270, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl id='btnLogin' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnLogin' tag='INPUT' type='submit' class='button button-primary wide' aaname='Login' check:text='Login' /&gt;" Guid="fa66990b-203d-4e89-b7fe-b30859254b91" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAsCAYAAACpMDdKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVjSURBVHhe7VrbbxRlHBUxiiJeohFIofFK8IKRS0zqC/Ff8Mn4QmJCeDLhQeIbUHznzUSK1Nay26K2TQnaBy9RbNMEqjElxra7bXe2mr1g2Z3W1u12uz9/38z8vrnsrO1aDe56TnI4c37n+z7a0DmZZXoHAQAAbBAoEgAANoyKIhlM/k5Hr2aopT9JB3sVDTrY5yg8PPz/1rf0z9LRb9PcEYtOW7jwFcnZsRwd4M0V5INC50Lk4XMh8vC5EHn4XPgfzFVXeKGL5HN+Etn/qUEvMfdz+4QqcuTIkTtedYZAF8mb36St0KKzEB4eHr6aV50h0EVyiMMXP0k4lOugIkeOHLntD/FHHIEukn0c7OMFLuHh4eH/2gt0kTz/cULzBc81PDw8fDUv0EXynBNAoVDoelWgi2TvpRl6lhlUIXLkyJEHVeArkr2XElAoFLpuFegi2dMzA4IgWBMFukie4SEIgmAtFOgieap7WvPpKoocOXLk3rlAF8mTVjhTofbmyjly5MiRC3SRPBGdBkEQrIkCXSSP8xAEQbAWCnSRNF+couYIE9pAOk8xKlJPWD6Qobb0CpllosIK/1FepWQ6T28N+Ncd+WmRYgWVl6lQ4h+U0iplf5kLPf/d9CrnBWq77O5X2mOu0vCo66GNowJdJLs52M2B0ubItKN+j7zecrnRg3mKunNcDOYCnRh01nOxdNziWW6eXnfWH5kqcnms0OAPKXpF9g9m6cRQMvR8VSTJWwXK3sxZ6+XrkyL5578/5Lc7F+gi2dU1Rbs4hDaS2jd6d3A+skjZcoE6+OnDNx8w6Ua5RF+NKD9Ho/ykMjpmhJwr6j//jCqSRJa6zRINfe/u6+YiGeIiqX4OtF5VoIukiYMmDqCNpPM0yTd6NDiPF4nmF6glZF/UJDKmDWoaXSJzeYnOBHK/+s9XRWKmf6MmVVRLvNeZR50iqX4OtF5VoItk50dxl12ea/g69ibf6MsUDeSt6v8y8qY78+TRPFllsDO+TMRF0qpzdZYDmQfOb01xkaR4b5dhXWdms/aZXCTfXbfXWAx8PfD16wW6SHbwEGw02jd6JDhXJcFPJC8H58wIF4kxZdCO6/YTyengGt/cf/5pp0isdf05ulEq0mdfqzPtIvGdAzYEBbpIHuuM0fbOOGuctvMCy1vq8cjrLHdvdF8+vEiZcoHa+wPr+/I0Vi7Rl8PK5/jaLgDf+VwkeS6SUyHnqyLJc5HI+jcSRSpwYV2xisTz98t5lgbOR15XucBTJPaiUDoHViXy8LnwtuXeG93LXymi3trkF+j4FfYq70vThTn11sak15x1x2dL/DFmmXqvzbp7dZEo7z//lFMkem1nlr5YUq+N7UJy5wH+7e/PIfLwufBfzAW6SB7tiIENR5MmnH9fDS6BkyrrTdN7qSLlPb9HYqRydKzXuz9B78QLlOFPQu7vkZQpP2fSMX3+Ml101p+0iuSmZ3+MDvz4BxVola5ec2dg41Cgi+QRHoIgCNZCgS6Shz+cZMagUCh03SrQRfKQFcagUCh03SrQRfJA+yQ96CE8PDz8Wl7gKxIQBMFaKNBFcv+FCeYkFAqFrlsFuki2crCVA0W1AB4eHn4tL9BFcu8HE5r3ea7h4eHhq3mBLpItThBUIXLkyJEHVaCL5J7z4yAIgjVRoItkW/sE3X1ecRwKhULX1G1hb21evWzQXW3jLs/9DA8PD1/Vq84Q6CKJxkzazAs2n7MXhily5MiRi1edIdBFovD2SIbu5Kax+L6j8PDw8AGvusILX5EoRCZNOsyPLFv4M9Ambp1NfAAUCoWqNzWHBwyKeJ5EBBVFAgAAUCtQJAAAbBBEfwLNDtqynKfO1AAAAABJRU5ErkJggg==" InformativeScreenshot="7cc6bca68da9be00e6bb3ff6624e25ab.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login Staff Binus Enrichment' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NCheckState DisplayName="Check App State 'DASHBOARD'" sap:VirtualizedContainerService.HintSize="854,574" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Timeout="10" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,197" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="338,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://enrichment.apps.binus.ac.id/StudentCandidate" Version="V3" />
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,357" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Login Failed. Please recheck the username and password, and make sure to connect to the internet&quot;]" />
+                    <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="338,117" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_4" Reason="Error: Login Failed" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/Dashboard/GeneralAdminRektor" DesignTimeRectangle="285, 453, 659, 78" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'DASHBOARD'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='sub-heading' aaname='DASHBOARD' check:innerText='DASHBOARD' /&gt;" Guid="1e3c3b84-392c-4766-b719-9386a8b7c6d5" ImageBase64="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" InformativeScreenshot="8547b64f47949ee8c77cca869398d16e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+              <uix:NClick ClickType="Single" DelayBefore="1" DisplayName="Click 'Please Choose Track'" sap:VirtualizedContainerService.HintSize="854,157" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/StudentCandidate" DesignTimeRectangle="546, 532, 391, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Please Choose Track'" FullSelectorArgument="&lt;webctrl parentid='ddlTrack_chosen' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ddlTrack_chosen' tag='SPAN' type='' class='' aaname='Please Choose Track' check:innerText='Please Choose Track' /&gt;" Guid="6f064c8f-f3e3-49a5-b193-e6192f56c9d1" ImageBase64="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" InformativeScreenshot="c71d37bc6c127d4b909668c90e079925.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Student List' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="535, 508, 439, 15" ElementType="Text" FriendlyName="'TRACK *'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='TRACK ' check:innerText='TRACK *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbsAAAATCAYAAAAJUaMpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALQSURBVHhe7dtBa9NgHMdxX4wX34G+hB28CB49efTsGxCPHsJKCQ0ldB1zdNhRNbBD5yqKBWHVikWLOww72EaxG0PKhqP8fJI8bbONbl09Gb4fCMmTf5L29uP/PMkNAQCQcoQdACD1CDsAQOoRdgCA1Pu/wm4rL91fsgMAAKYTh117TW7OjbbMvCMnGx+7uTW1Tblb8+VkxvXMQkXNX9GdY+1AmVxVHTtMOvpW1ZKXUcY8N7o/X1Hrtyl8LctZbcUXhQa7qhVclb/27Qnr1O53TNA9qcfHx8fxHgCAK1zo7FqrjgkbO7DCsPNrXTsy4dUsK7NY15Edh1qrnvyCpyBMx4S+CTQ3H6h1OEwsc/9eV1GcJcNu0FNjxVdpsxePk149km7ekR6b/dxD6e4t88+f2iIAAJebKey0X5M/X4m6vshJQ6W86ep+BPJeJ9NuS0HWU/WnHZ43Cru++V3X/MZufH4S3wTd7XvSth0DADCFGcLuVJ0NX+7Ltk7smaN60dY7quZLagwLYShOmNqMRGHX1K55vmtC79zk5Vnhet2c2T4/kx6wbgcAmN7UYec4zmjzTffWG9iieqovFFU/iEfhtaVNm3ZhmPk1JXrCs8K6azq6cH3wRfPysPtuAm7j0BzsSc/fjNfxAAC4wrU7u/5mKerChs2bdqryEkEYbQt1E4FG2Nnla5o4ORmG3fJH9aMXUxwTkpfGHQAAM7n+NOago6o3XofrrHsqfRpFn5Ho9AZtBVlftf24csFozc44qKs47+vdpGsBAJjRTC+ohN2ds2i6tzDM3MQandX7UJS3Hq/Udd/7cgpVbSVf3fxj5yCTYWf0v5TlFkwnOJoiBQDg380UdnF35yp4G8hdaYynNIfCLi23pu0otE7VbVZUzDrR93vRd3bLdprzXNhN/VYmAADXcCHsAABIG8IOAJB6hB0AIPUIOwBA6hF2AICUk/4C9cpz8vywMZIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TRACK *'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Text="No[k(enter)]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/StudentCandidate" DesignTimeRectangle="546, 581, 417, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="9238cb81-a889-41b2-9bab-11f5cd61094f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaUAAAAsCAYAAADFGqcKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIMSURBVHhe7dxRSyJhGIbh/f//rCxIKhFTpBMtsqJIKS2/eIfJpV13d0ZqfQ+uC54DZ+z4ZvSzH+PxuJiZmWWYKJmZWZptonRwcGBmZraXbY0SAPxvogRAGqIEQBqiBEAaogRAGqIEQBqiBEAaogRAGqIEQBqiBEAaogRAGqIEwM5ms1np9/vl+Pi4dLvdMhwOy3w+r++2J0oA7OSjF4eHh+Xs7KyK0sfru7u7+l3tiBIArcUTUrTi/Py8vLy81FdLeXx8rJ6ajo6OPl1vSpQAaK3X65VOp7M1PLe3t1VHJpNJfaU5UQKgtQhShGmb19fXqiPx/VJbogRAa/Hx3Onpaf3qs9VqVXVkNBrVV5oTJQBaGwwGVSseHh7qKz9dXl5W966vr+srzYkSAK3Fse84ZRdPTDc3N2W5XJbFYrEJUpzEW6/X9bubEyUAdnJ/f1+dtItm/Lr46C4i1Vb8rSgBsJP4/ujq6moTknhqih/TRkdOTk6q+22IEgBfKo6CR0di8d1TG6IEwJe7uLjYhGk6ndZX/02UAPhyb29v1ZHx6EkciHh6eqrv/J0oAfAtnp+fNwch4vulJkQJgG8Tv2OK//7Q9CM8UQIgDVECIA1RAiANUQIgDVECIA1RAiANUQIgDVECIA1RAiANUQIgDVECIA1RAiCNP0bJzMxsH/stSmZmZvueKJmZWZKNyzutCUXkvM93iAAAAABJRU5ErkJggg==" InformativeScreenshot="f970494778bc5cee3066caf1a187c562.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Student List' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="535, 508, 439, 15" ElementType="Text" FriendlyName="'TRACK *'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='TRACK ' check:innerText='TRACK *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbsAAAATCAYAAAAJUaMpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALQSURBVHhe7dtBa9NgHMdxX4wX34G+hB28CB49efTsGxCPHsJKCQ0ldB1zdNhRNbBD5yqKBWHVikWLOww72EaxG0PKhqP8fJI8bbONbl09Gb4fCMmTf5L29uP/PMkNAQCQcoQdACD1CDsAQOoRdgCA1Pu/wm4rL91fsgMAAKYTh117TW7OjbbMvCMnGx+7uTW1Tblb8+VkxvXMQkXNX9GdY+1AmVxVHTtMOvpW1ZKXUcY8N7o/X1Hrtyl8LctZbcUXhQa7qhVclb/27Qnr1O53TNA9qcfHx8fxHgCAK1zo7FqrjgkbO7DCsPNrXTsy4dUsK7NY15Edh1qrnvyCpyBMx4S+CTQ3H6h1OEwsc/9eV1GcJcNu0FNjxVdpsxePk149km7ekR6b/dxD6e4t88+f2iIAAJebKey0X5M/X4m6vshJQ6W86ep+BPJeJ9NuS0HWU/WnHZ43Cru++V3X/MZufH4S3wTd7XvSth0DADCFGcLuVJ0NX+7Ltk7smaN60dY7quZLagwLYShOmNqMRGHX1K55vmtC79zk5Vnhet2c2T4/kx6wbgcAmN7UYec4zmjzTffWG9iieqovFFU/iEfhtaVNm3ZhmPk1JXrCs8K6azq6cH3wRfPysPtuAm7j0BzsSc/fjNfxAAC4wrU7u/5mKerChs2bdqryEkEYbQt1E4FG2Nnla5o4ORmG3fJH9aMXUxwTkpfGHQAAM7n+NOago6o3XofrrHsqfRpFn5Ho9AZtBVlftf24csFozc44qKs47+vdpGsBAJjRTC+ohN2ds2i6tzDM3MQandX7UJS3Hq/Udd/7cgpVbSVf3fxj5yCTYWf0v5TlFkwnOJoiBQDg380UdnF35yp4G8hdaYynNIfCLi23pu0otE7VbVZUzDrR93vRd3bLdprzXNhN/VYmAADXcCHsAABIG8IOAJB6hB0AIPUIOwBA6hF2AICUk/4C9cpz8vywMZIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Please Choose Institution'" sap:VirtualizedContainerService.HintSize="854,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/StudentCandidate" DesignTimeRectangle="546, 615, 391, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Please Choose'" FullSelectorArgument="&lt;webctrl parentid='ddlInstitution_chosen' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ddlInstitution_chosen' tag='SPAN' type='' class='' aaname='Please Choose Institution' check:innerText='Please Choose Institution' /&gt;" Guid="26f83847-c571-4ccc-a321-0698741db6b9" ImageBase64="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" InformativeScreenshot="84a709ccb1eed86c52e5e4418e7bebd9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Student List' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="535, 591, 439, 15" ElementType="Text" FriendlyName="'INSTITUTION *'" FullSelectorArgument="&lt;webctrl aaname='INSTITUTION ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='INSTITUTION ' tag='LABEL' type='' class='' check:innerText='INSTITUTION *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbsAAAATCAYAAAAJUaMpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANISURBVHhe7dvRatNQHMdxH8Nb30IfwAu9FLzxzkuvfQUfIDSU0DAC6yhaMGXDlILVFbyIDDZpWRlhwY1V0DHcJEixbJSf/5Ocdllt1455kYbfBzqSk2SNu/DL6UnvgIiIKOcYOyIiyj3GjoiIco+xIyKi3GPsbuUAePgE+KZ3iYgoky5jt+vCqHX1TheuYaDsn+p97bgFZ3wOcNpZh2OaMC0Thmmh/D7ERdCAVbLil1kwYBSTbavUQIATtBwHrWO5eNHz0sb3GKChr7WKcm3BHP+uRpA+TxtGCFtV2OpeS/IybVRbIaKhPi5OWg4My0OYGlO6tSn3oVyoHz+Ap6/iXeCPHiMioqyZHTvHg/e6ip2+HlLSsYt8lIsu2qPjwwGiaKB3Et2aAXdX78SmR2zR8/6JmDJ3bIBgQ0JYayM610MSv+CdDWsjkKMJFTu37kmwe3okMTV2v+ryl7sHPH8JPHoMvJDXXflTftbHiYgoU2bHrtRET+JWftvGuHfp2O17MNd8RMneVJmI3ZmKsodgYsaGYQCvWIZ/luyq2FW3I7mXMloyYRuZObNTDleA+w+A8oEeICKiLLrmY0xXfgJh3cH6np7/pGM3DOFZFirq48DRjGlCJmKntiXY08Tv20m2Veyc1kkcx8rqJ7mDxOzYSeDUrC78IsF7JuHTw0RElDlzY4d+G+6KXsuaWLND/xC+xMAsmDK+hd5E9LIQu3gtbvK4pt43DpwYx05833TG65UzY/d7D3A+JtublXj5joiIsml+7MSpX4at1rImYzdyHqFbt2Gs+Ug/0pKF2MXbN5nZKWrWWkrWK6/9GJOIiJbCQrHDsIemLf/pd2bEThnKDDB9jbhd7Owra2fKYLsKa+IBkrmxu8Ga3Th2oq/eSyK5xdgRES29xWKn7HuwLAvm6Jx+dGWtLuq4sFb/18wuiU/8BOUoUlGIhgSweaT3R+bF7gZPY6ZjJ/NZ+GtyncXYEREtu8Vjhz523hiX53xtwlbfcTMlCOr7a6vraP9MDo3cJnZxkD5UYBeM+Ht8pszCGntTnv2cGzux4PfsrsZOHMm/0WDsiIiW3WXsiIiIcoqxIyKi3GPsiIgo9xg7IiLKPcaOiIhyDvgLZTr8N0+iupUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="854,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+              <uix:NClick ClickType="Single" DelayBefore="5" DisplayName="Click 'Please Choose Strm'" sap:VirtualizedContainerService.HintSize="854,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/StudentCandidate" DesignTimeRectangle="1005, 532, 391, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Please Choose Strm'" FullSelectorArgument="&lt;webctrl parentid='ddlStrm_chosen' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ddlStrm_chosen' tag='SPAN' type='' class='' aaname='Please Choose Strm' check:innerText='Please Choose Strm' /&gt;" Guid="01e37371-f6dd-4d7b-9dd6-4f9cecf7c224" ImageBase64="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" InformativeScreenshot="a303c5c28afe07759e48a200d6c67428.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Student List' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="994, 508, 439, 15" ElementType="Text" FriendlyName="'STRM *'" FullSelectorArgument="&lt;webctrl aaname='STRM ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='STRM ' tag='LABEL' type='' class='' check:innerText='STRM *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbsAAAATCAYAAAAJUaMpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKjSURBVHhe7dtNaxNBAIdxP4wXv4F+hB68CB49efTsFxCPHpYuZelSFkmJusGIaEQw2oWWLhSMVhQN9lCaYlsKoeRQGirl78zu5K1vxihFlucHS3YmyZLbw+xsLgkAgIIjdgCAwiN2AIDCI3YAgML7f2O3NifdLLsBAACTG8Ruf11JJZTvB/KnPflzsVZ220ofBwpmzRH48qb9/Nwc5bRtvvRFVc98tve+HypO1rWfX1G7SSTPC1XfdBN9XTUqnnmvaq5wzE/3umlCdy/Nzw8O8lcAACbQj93aK1/RwpYbmebsdfrRyuwkiqJEu26Ys7EbCtZhS/XIV+17PrSxiyuxwjetfKKn21A8X1LptNi9uCNdvibdNa9Tt6XrV8yvvO/eBADgz7nYdZTODyJ1qnFiZ3x55ilasqu+PHbR20RxUFPzKJvKtJdN6JbTE98dEZnQXb0hrbsxAAAT6q/s2mlJ3txzrW533cwx48Sus6rqbKTFnXyYxS7ZygJY/ZzPmVklUUlp52Qo++x+3ZQ5Pj6QbrFvBwD4OyMPqLQ/vVY59OSFZdW/dtysc2bs7N6bO2ZiLf4Y3PzMY2e+0awpqDSUZXSzrjA7Pyd230zgFvbMybb06N1gHw8AgAmMxK6nu5GqHASjtzV/t7I7aqkeRkrcqs7qx+6oqdqMXc3ZvcFA8QebvXNiBwDAP3Rq7KythTAPVc8YtzH338fynjRGnsbsXcM+AFNaWlEtMJ/P9u+IHQDgYrjYddXZG9qrO2wpeWhWdk03tsbZs8tWd4MV4XDstFFXMO0peNm7KLEDAFwMF7uOGk/d/+tmffnH/i+XGSd2Rra6m09ln8cciZ1sCP2hgBI7AMDFOPM2JgAARUHsAACFR+wAAIVH7AAAhUfsAAAFJ/0C/H96FU972xMAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'STRM *'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Text="2021[k(enter)]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/StudentCandidate" DesignTimeRectangle="1005, 448, 417, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='ddlStrm_chosen' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ddlStrm_chosen' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="d35069a9-f2ca-495b-859c-fe6615bf3eae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaUAAAAsCAYAAADFGqcKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIWSURBVHhe7dxhSyJRGIbh/aX+39RA0STSkL5UUhaJipp6lneYXNptd2fKtgN7XfBAjvX5Zpxj38bjcTIzM8thomRmZtnsEKWTkxMzM7Mv2ZtRAoB/TZQAyIYoAZANUQIgG6IEQDZECYBsiBIA2RAlALIhSgBkQ5QAyIYoAZANUQLg3e7v79P5+Xk6PT1N3W43jUajtFgsynfr+3CUGo1G+RMA/5OXXjSbzdTv94sovbx+eHgof6seUQKgtrhDilacnZ2l9XpdXk1pNpsVd03tdvvV9apECYDaBoNBarVab4ZnOp0WHbm+vi6vVCdKANQWQYowvWW73RYdiedLdYkSALXFx3O9Xq989drz83PRkcvLy/JKdaIEQG0XFxdFK56ensorP1xdXRXvTSaT8kp1ogRAbXHsO07ZxR3T3d1d2mw2ablcHoIUJ/H2+33529WJEgDv8vj4WJy0i2b8vPjoLiJVV/ytKAHwLvH86Pb29hCSuGuKL9NGRzqdTvF+HaIEwFHFUfDoSCyePdUhSgAc3XA4PITp5uamvPp3ogTA0e12u+LIePQkDkTM5/PynT8TJQA+xWq1OhyEiOdLVYgSAJ8mvscU//2h6kd4ogRANj4cJQA4FlECIBuiBEA2RAmAbIgSANkQJQCyIUoAZEOUAMiGKAGQDVECIBuiBEA2fhslMzOzr9gvUTIzM/vqiZKZmWWycfoOn34pl4RLr2wAAAAASUVORK5CYII=" InformativeScreenshot="4089e2dd2bd6ad4efa5708f50a4f96b9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Student List' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="994, 375, 439, 15" ElementType="Text" FriendlyName="'STRM *'" FullSelectorArgument="&lt;webctrl aaname='STRM ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='STRM ' tag='LABEL' type='' class='' check:innerText='STRM *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbsAAAATCAYAAAAJUaMpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKjSURBVHhe7dtNaxNBAIdxP4wXv4F+hB68CB49efTsFxCPHpYuZelSFkmJusGIaEQw2oWWLhSMVhQN9lCaYlsKoeRQGirl78zu5K1vxihFlucHS3YmyZLbw+xsLgkAgIIjdgCAwiN2AIDCI3YAgML7f2O3NifdLLsBAACTG8Ruf11JJZTvB/KnPflzsVZ220ofBwpmzRH48qb9/Nwc5bRtvvRFVc98tve+HypO1rWfX1G7SSTPC1XfdBN9XTUqnnmvaq5wzE/3umlCdy/Nzw8O8lcAACbQj93aK1/RwpYbmebsdfrRyuwkiqJEu26Ys7EbCtZhS/XIV+17PrSxiyuxwjetfKKn21A8X1LptNi9uCNdvibdNa9Tt6XrV8yvvO/eBADgz7nYdZTODyJ1qnFiZ3x55ilasqu+PHbR20RxUFPzKJvKtJdN6JbTE98dEZnQXb0hrbsxAAAT6q/s2mlJ3txzrW533cwx48Sus6rqbKTFnXyYxS7ZygJY/ZzPmVklUUlp52Qo++x+3ZQ5Pj6QbrFvBwD4OyMPqLQ/vVY59OSFZdW/dtysc2bs7N6bO2ZiLf4Y3PzMY2e+0awpqDSUZXSzrjA7Pyd230zgFvbMybb06N1gHw8AgAmMxK6nu5GqHASjtzV/t7I7aqkeRkrcqs7qx+6oqdqMXc3ZvcFA8QebvXNiBwDAP3Rq7KythTAPVc8YtzH338fynjRGnsbsXcM+AFNaWlEtMJ/P9u+IHQDgYrjYddXZG9qrO2wpeWhWdk03tsbZs8tWd4MV4XDstFFXMO0peNm7KLEDAFwMF7uOGk/d/+tmffnH/i+XGSd2Rra6m09ln8cciZ1sCP2hgBI7AMDFOPM2JgAARUHsAACFR+wAAIVH7AAAhUfsAAAFJ/0C/H96FU972xMAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="854,157" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/StudentCandidate" DesignTimeRectangle="1313, 840, 120, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl id='btnSearchStudent' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnSearchStudent' tag='INPUT' type='button' class='button button-primary' aaname='Search' check:text='Search' /&gt;" Guid="0a476a0f-eaac-477e-a6a3-b4024cc0f9f4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAsCAYAAACnkNxJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVDSURBVHhe7Zfbb1RVFMZFjKKIl2gKBmi8By8YKU1MwwMx/AX6Ik8+kPCkD4T4yIv6YHzRxMTIRcGKLaC2UAI0KSWR0kpATBCIdi69nE47dqZT2jPTy0w708+1z9lrzz4zpw8SoTOn+wtf1ln722szzW/OzJn7YLSsZIAvM5UBbx+awu6uBBpODmFri7CFra2ymr4q+oZTMey+OEospyXVojzAv7gxgToaKjMd6LvONrn/OnsJc8FUlwJ+ju7sLb9YeJO8hd4lvtXkVZkLtiwFfNevo07oWG40fTD6XfTxzlLA62nTGz8PSvN1aTV5Neb19NHOUsA3U7CZNhRt+iD1LAX8tZ8GlV/Xrk0fjJ6lgL8qQ1ODWVkK+KYTA3iFXFrZJq/unOUBvunEoKkBrSwF/OXjA8YBNksBf4kWjYNrlgL+wrF+5RcXqSav3pylgD/vhANl1T2kfN3k1ZWzFPDnmvuNA2yWAv4sLRoH1ywFvPbHPtQ2kSusbruSQSRLLzC/ANC/bHYWBztEnkaElrPzC0VPTWOfNr8tRIPzs/jKc24KPTn3PDGDhQXYExnsayvO1baPo90uICv+vzztpT3J+DjlYraAnj/kPt7fNwfY6WJfgZWlgG+kYCMFotY29cvq7e99nsCFGWCof1TmFt67nMBOJxfA53Bs0XkLxwmaTdRuhYa0XEK7JvZR35bAqTSQHE64eRvlNJMcmcDO0/K89hQ+vWJRzsD59clcAv/vf9+9y1kK+IajfdhAYWXVSdxcyONCT+m6qBK47xy5M4Oh3Cw+/yuL7G0bDSpPoZugdRNw3v/JaAGYSDv9hzG6paem8L7vudqsvh51gZfvr5zKUsDXU7CegsqqFvbfpo/e6Rkc+W24JE8jTMCbF5n/gMDZoynqx3EtN4+TnZwXoTn9uXF00x0djsSdvtkGLIuufc/VZvV1Cbx8f+VUlgL+zA/Roo9q10vex/HNSA42fZ8im8PZ6zGZ2wTcK/uflJxPonMmj84e94yP6Q62BkfkeSlcEt/hSgXcDI3hLS0LR905ZfV6Smc1Tdo++yunZyng6yiobMewN5wl8C7IdQ7wHJr89l6fhXjO82hmGnudXEAr4NLv4jqOsxm6u6MjarZpku7wPkv1XuuzmqP0LiDgnrUKM0sBr2mMYG1jlGoUa2mD0ztV65c8t9BCD1jiDqxplMB95j9L0B3dP6zNJ3Fe3vE1jQzNPb/+T3pz0JP8l63u/J5h+g4neO/6/v9F4J7XJ4Hf/b//znOWBtwNfS0HF/Vdy+PY0xNTeX1XBuF8HucdcEXgnvnWSdzIz6GlQ1ujXIDMJsap16EJx3EmAyRiSbfvoHPpJ5tljWGHmo9hxxlxXTorLYF71nTf8d8v/T/kLAX86e8jFegJXM2JL2/5ezhfQCiaRJ2T2QiJdf13eGbafSpPp/FO6Vnd00jMZ/F1yxi6CFrX1WJWJ74C8iKT/cUJdGXoyV37HX6jV2Tls44jLnDPWoWZpYA/RYvGwTVLAX/ySJgcMTWglaWAP+GEEVMDWlkK+GOHw3hcs+mD1bM8wI2Da5YC/uh3IXLY1IBWlgK+moLVFAiLDaYPVs9SwB/+NqT8iHZt+mD0LAV8lQxLK9vk1Z2zFPCHDvUaB9gsBXzN4RAePCTca2rA6hq/p/S3T1t44GBv0Qf+Nn1AesGWpYA3R2yspHDlAXeTXzV5deaCLUsBF/rocgL30zvD8X5ZTV/VvWCqywNcqClsYzt9BKyiz/4V9O5YQYOmVlcVT+jb2yw0aXc2qwy4UbBlgC8rAf8CdmrT5vaW4psAAAAASUVORK5CYII=" InformativeScreenshot="698c229373c7873dc05dc5d24d1c2c1a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Student List' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NCheckState DisplayName="Check App State 'Export to Excel'" sap:VirtualizedContainerService.HintSize="854,489" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Timeout="120" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,272" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Export to Excel'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/StudentCandidate" DesignTimeRectangle="535, 716, 150, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Export to Excel'" FullSelectorArgument="&lt;webctrl id='btnExportExcel' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnExportExcel' tag='INPUT' type='submit' class='button button-orange' aaname='Export to Excel' check:text='Export to Excel' /&gt;" Guid="149575b3-ec01-490a-b9fa-38baade518e3" ImageBase64="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" InformativeScreenshot="1a53a07c8ce795b6a2ab62e75c235fe6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Student List' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,232" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="338,117" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_5" Reason="Error: Loading too long" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://enrichment.apps.binus.ac.id/Monitoring/GeneralAdmin/FinalReport" DesignTimeRectangle="535, 896, 150, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Export to Excel'" FullSelectorArgument="&lt;webctrl id='btnExportToExcel' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnExportToExcel' tag='INPUT' type='submit' class='button button-orange' aaname='Export to Excel' check:text='Export to Excel' /&gt;" Guid="d7c50cf1-08a8-4412-b9ac-51be4db86021" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAsCAYAAACdbKF/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbrSURBVHhe7VjrbxVVEPcv8oEoFhUFRY3GTw18xIhfCSam/gEmCOXRgrQqBMtLY/kAqOURKNBSSKmG1gRbVKrQCraUPu6j99H72HvHOXvOnD17drctdG+/OJP8Mpnzm5md3fO7Z++9TwEb2zIYC41tWSwgtPJwF8x1NED20PuQO/AOZBG5g8pzzPF8MWpm7qcGKP/VpdTkmU9opb5D/gbk7ca2Z555a72IWjJNC02cZNkDb0P2awR79jF4oSkyLbS5H/F1KZLmKWTeipmflxevUTIttMzBdyHz1VuI9ZYn2OvMM78Af/A9pS5TaG4CIaKQeStmfiGeTAtt9ss3Daz3x1jki5n3x8z7Y4MnixAagxEPyLTQ0q1vMBixg8wQ2joriWOOlx6TaaGlWtZCumUde/axejJLaGsDiWLNi5ln/vF4Mi205P7XIYWwPYF55p+EJ/NONEUwGHGCzDvRvniNwYgdZCw0Rk1BpoWW2PeqgTURfon87VGAShGqJQ+Vu82Q6uqDijMKhdNefeaPcagmL0FmXyuUCzigg/kOelE/fQlyR72+6e5L4OSLkqsAVPOjUOzerPnEvrMgSt1ruj0yUHlwAnvvhVJazuGuU46ay6s/DY5a1zOo2Lkl5wif4SNVT30IxjyEdB/k2vE6TgbKPZS/BlLXB6BaGIC8e78bIXtrCCr0PMR1Cvjczoj8iJ7YJ/8gA9UHraqn7Bvu4+fJIoRWIwihJc6GcBvlw3h4DFIiPnoCH/g4lDoEJ4QmHr7KbW9GceB+3v1Mxj24ESic8i8fy1pE+sYACteocTcBN0TxifZDrnidX4lHiD5iQymOQtg9LGoGE9Y8BtwPWLoHPwQiboRSTvTdKDm8drUwDIVO8SESPArverPKje4ZFNrygUwLbWbvK7XHEG7SzJlw7sgxKJcyUOrZAPlxPHHuNiquFUootFKPl5u7nwGYFn02wNwkim6Ecj1kR2YAJk9B0o3PyE0w+ALS1X+adTyjhJYzckIRuIfFzmAiOI+HT6GIp6wztBVmh1F0k+2qvh0cPC3LP2+w8gnRPcXzqt5vDawvB8hChZaI8Evm1SZF8cmBYdxsfChZueFyXZ5oJLTkSRRkHjf2z63ISxGWr0mO4NYZwklYm5A63wlOWZw2UfnGuuFdGEKT62o+YwZdR6ekij3eP4+vv4g7b0AF53Nfi6cUL3qVBt1eur/Pez1tPm8JLbzeQ5w8mRbadPPLGjMRfsn80Ii6Ghlu0FWDP9yOpxqeNPdbjLoWFJNKR6viUeT83gQplxcPV/Zw6xXcuqv9UIURKOg8wyrjUOxt0NfV+YV+yFEc4l2Ie0CheevBGXSdMQNxkrfmQaN7lnwDFPHQhmQnpN0Y18V1550vuqc80cz+4b4WPJkhtNUqoYZebVIU7z6Qf2/gaTMDxYu0LoQmNjKYP0PcNXsdvRaOiMUmqA0/fFS+ou1+vnxj3fZaaLROM4TkG+L19zHm8a1LP4vXqCb7oZTFV+VAvVxfcD7qGeRJaOF1tfVkntCa6hCra+vdTeoIrgt/Qbwu7kC+rQ5m74hfnBdh1uX3K6GF9Guql9+P7m231ldD5t40fj86CQk3VpugeNEffyaq/qqONtLqE/AkNL1uzuDP92bwr9vz+OravodyeRqKF+og0TcoZ2oT6yehjD84wp+D8B2qZ5CXQtsfWF8OT2YJrcbQQrO5T9QX4C0q3g5F/DQ7v4nYFFoIhEDEBvRtUaKqg1Rvv/sdx6sxNwHRdgRPNTwt+usVj/AJbR6E3cOiZjBhzaNRjz+EikoUKp7EeFTGuVF8n+bxe9o5b+7Edx+oa0b1NIUW5GoNMi20qd0vwdSeeRAHP4ibZPwHJeD8vQfSuF5NdUPayHc/zfjlN/eNElqXx9lIXrlo/YeFD/zKJiNHbsKcUZO+MwaQ7YUMrXXdRKHdhKyR4wPdn7gHFJrNLziD7/mIeTDHeA7VVC/kesQM4p6N3B+68dfmGBRPi3gTZG7jsypjcVldJ63uYXdIT8VlUWi2OYPGNdx6K7bxhDxZtNA45jiGmEwLbXL3KgYjdpAZQntRkezZx+fJtNAe7XwBHu1CsGcfoydjobGvqSfTQptoXInkSphAuJ5jjmOIyYJCsz0idJ155hfBk2mhPdyxAiZ2PC99Y4RnnvnH5MksoSk0ruCY41hiMk9o259DEsGefYyezPuOtnPVogrZs1+sn9gV8j/a9LebYfzzZxmM2CA0RaaFlh86ZyU+wzHHS4rzQ+eVugyhCUtfboKxbU/DGCa5fpvyHHP8mHH68h6lKmk+oQnLD56DqeP4Gt2xUhWbjQhWzLw//p/yQjNTxz90NWRbQGhsbLUwFhrbMhjAf3OQPwPWvLSDAAAAAElFTkSuQmCC" InformativeScreenshot="e3f5a5666ec65dee07625b3a35aab5b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Monitoring Final Report' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+              <uix:NCheckState DisplayName="Check App State 'Save as'" sap:VirtualizedContainerService.HintSize="854,489" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Timeout="120" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,272" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DelayAfter="2" DisplayName="Click 'Save as'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="183, 90, 119, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Save as'" FullSelectorArgument="&lt;ctrl name='Downloads' role='document' /&gt;&lt;ctrl name='Recent downloads' role='list' /&gt;&lt;ctrl name='What do you want to do with Student List (Thu, 05 Jan 2023 22.56*' role='list item' /&gt;&lt;ctrl name='Save as More options' role='menu button' /&gt;&lt;ctrl name='Save as' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Downloads' role='document' /&gt;&lt;ctrl name='Recent downloads' role='list' /&gt;&lt;ctrl name='What do you want to do with Student List (Thu, 05 Jan 2023 22.56*' role='list item' /&gt;&lt;ctrl name='Save as More options' role='menu button' /&gt;&lt;ctrl name='Save as' role='push button' automationid='' check:fulltext='Save as' /&gt;" Guid="88515e42-8e46-4ffe-8173-bd7c2edf61fa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHsAAAAkCAYAAACpH0VdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG4SURBVHhe7ZsxjoMwEEX3fPR0nIcrcAtoKTkBFRU1DQ0FDQWFo4920MQCJ1FSGOZbeoJhjI14HpMmf0mSOGIDyjbELjtNU5dlGbkxu+yjJLkXlG0IyjYEZRuCsg1B2YagbENQtiEo2xCUbYjoZXdd53RDfNSPvCZq2cMwbEic57lr2/apD3mfaGVD7DRNrmmawzz5nEtVto+/xcvCwD3+dq+vFUXhlmX5vyv8aTibw89hPIyr742NqGVLdaP5FY5c3/fbETFePPoiRl85R66qKjfP8yZDRMt4iJFDHxlbCM2hx0SuLEvK/gUiKFQ9vlAtEJJkh/AXguSBxGfoOXCO55E5rsAlZAu6shBDnG56MYhA9B3H8Un8UTv7XITmwJjrum7XZaeImUvJ1pXlV6jOSQzJdV1vR71AQr8DNK/mEBBjEcQuPFrZeMH6ewl0ZeNcS0Osqw59IBkgJ/0+EROaA/fLGJgLz0XZX4AXrZuuMpEmDVL9qvMXgKC3XzSc45ruA0Jz+GPoBRUrl9rGyXdQtiEo2xCUbQjKNgRlG4KyDUHZhqBsQ1C2IXbZ/Mvu/dllk/tD2WZI3AM2lYqjj/gz8gAAAABJRU5ErkJggg==" InformativeScreenshot="bfad2d211a67b9709cebcb419320bd0e.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,232" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="338,117" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_6" Reason="Error: Save As didn't appear. Please recheck the browser (Edge) Settings" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="183, 90, 119, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Save as'" FullSelectorArgument="&lt;ctrl name='Downloads' role='document' /&gt;&lt;ctrl name='Recent downloads' role='list' /&gt;&lt;ctrl name='What do you want to do with Student List (Sun, 08 Jan 2023 12.16*' role='list item' /&gt;&lt;ctrl name='Save as More options' role='menu button' /&gt;&lt;ctrl name='Save as' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Downloads' role='document' /&gt;&lt;ctrl name='Recent downloads' role='list' /&gt;&lt;ctrl name='What do you want to do with Student List (Sun, 08 Jan 2023 12.16*' role='list item' /&gt;&lt;ctrl name='Save as More options' role='menu button' /&gt;&lt;ctrl name='Save as' role='push button' automationid='' check:fulltext='Save as' /&gt;" Guid="e266cb2d-f635-42c7-8f19-152396286184" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHsAAAAkCAYAAACpH0VdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG4SURBVHhe7ZsxjoMwEEX3fPR0nIcrcAtoKTkBFRU1DQ0FDQWFo4920MQCJ1FSGOZbeoJhjI14HpMmf0mSOGIDyjbELjtNU5dlGbkxu+yjJLkXlG0IyjYEZRuCsg1B2YagbENQtiEo2xCUbYjoZXdd53RDfNSPvCZq2cMwbEic57lr2/apD3mfaGVD7DRNrmmawzz5nEtVto+/xcvCwD3+dq+vFUXhlmX5vyv8aTibw89hPIyr742NqGVLdaP5FY5c3/fbETFePPoiRl85R66qKjfP8yZDRMt4iJFDHxlbCM2hx0SuLEvK/gUiKFQ9vlAtEJJkh/AXguSBxGfoOXCO55E5rsAlZAu6shBDnG56MYhA9B3H8Un8UTv7XITmwJjrum7XZaeImUvJ1pXlV6jOSQzJdV1vR71AQr8DNK/mEBBjEcQuPFrZeMH6ewl0ZeNcS0Osqw59IBkgJ/0+EROaA/fLGJgLz0XZX4AXrZuuMpEmDVL9qvMXgKC3XzSc45ruA0Jz+GPoBRUrl9rGyXdQtiEo2xCUbQjKNgRlG4KyDUHZhqBsQ1C2IXbZ/Mvu/dllk/tD2WZI3AM2lYqjj/gz8gAAAABJRU5ErkJggg==" InformativeScreenshot="8731e3e938a333042a42803087883641.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="854,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][d(alt)]d[u(alt)][u(hk)][d(hk)][k(back)][u(hk)]" Version="V3" />
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DisplayName="Type Into 'Edit'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="HardwareEvents" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Text="[downloadPathRegisNoTrack + &quot;[k(enter)]&quot;]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="146, 41, 542, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd aaname='Loading' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='41477' /&gt;&lt;wnd ctrlid='41477' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Loading' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='41477' /&gt;&lt;wnd ctrlid='41477' /&gt;" Guid="e19c46b2-9d36-4417-af5f-db8c28c90792" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAeUAAAATCAYAAACujBXSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVHhe7dUhAcAwEMDA2Xj/3mqjYyXja8CBQxGQZ2Y2AHCfKQNAxJnyWusTAYD/mDIARJgyAESYMgBEmDIARJgyAESYMgBEmDIARJgyAESYMgBEmDIARJgyAESYMgBEmDIARJgyAEScKQMAd5kyACTMfgGIJ41y7QgCzAAAAABJRU5ErkJggg==" InformativeScreenshot="0d8b9cf3f00f9a756b3b307bb1545e7d.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <ui:GetLastDownloadedFile File="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[downloadPathRegisNoTrack]" sap:VirtualizedContainerService.HintSize="854,501" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2">
+                <ui:GetLastDownloadedFile.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,245" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b0c3114-fb1b-4d9b-af9b-8cd1133cc092" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="747, 494, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="a244f787-f983-4153-8742-a329969eb0de" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHCSURBVGhD7Zk9jsIwEEb3TjTpU3OBXCYXoUhFyxk4RCqqFFQcYtYvv2MnCG2UOEY7n/REgg1Cz5Mxkn+yLBMjHiY8MiY8MjPheZ7L9XqV1+sllnXBHQ5xGfr1hDPh8XjI7XaT8/ksp9PJWAHucIjLULonnFVh4tKXGH8HlzjVjj3hPApW2duBS5xqx55wsvRBYz1EOzbhO0O0YxO+M0Q7Tkt4eW9/Q5e7lEtzvgyiHacjvKik0ZLdfVWq8S+FaMfpCKe6m0qKpbEvhmjHCbWU0tU3zovZmN9pSvdeIVXDpZqnF6x9WoYc25qIdpzYptmJJJ7MERalkapw1whu5Xdj3W0whzE3sLSIsSDacWLCe/oKHaV7JT7IROxQve56sbr7qIWJDdGO0xTuKLqeEWymPAFT9TKH6h1e289684+HaMcJbZruX8nQBvrW0kqc9WbVLrhvXJ07JsHv94IjINpxcpvmmLENTH1dWrlK+DAWtoywrVhL+T8Q7diE7wzRjk34zhDt2ITvDNGOPeF2ALEtHw8g7IhtWz4esdkh8jbgDocfD5GBCZfLReq6lufzaawAdzgMZcNMuLEvJjwyJjwqmfwCZCHOpNwSRUUAAAAASUVORK5CYII=" InformativeScreenshot="1e84d24b451463705e53019e9bbdcc46.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:GetLastDownloadedFile.Body>
+              </ui:GetLastDownloadedFile>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIkSURBVDhPpZNPTNNwFMebGC/EeDBeOHj14kFcQuJFTfCgnkzUxISYHTDGO4kn9cLJGGJi9GBEoLPbXOIgMCaUrbBs3RiFsQmH4dg/3NZV2FgIA93vR//Yt+S3NHQSEg/f9tfX7+e9vvdSStO0/1Lb4L+kqqopZgoYhTHuSKdS1nmOG+ODwdFcNvswk073IoTOEI8JAumGs/FYbMDBMDV6eFgbd7vXPRMTy8FAwP4jmXy6U612Ea8Jzudy911OpwSgLkUHV74nEi+KhcKder1+4WgbrYOiKKeikch7gKBybEl4tftz5a66m79oBIiqlYoFvqQFz/n94wAL0ejbRq1wCUcG4oju0hB9WcPsE05F9VbfoLXV1Wc6M9Z80Cu/s9tse6Vi8TY84/l+tyJGNfS5u5kAdLg0OEjgjVSqbyEc/hDh+SFKKpdv2EZGMNyJAbl6RAISYe+jBXjXaDTO6eDHbCbTGw6Fhij/7Ow3YXHxDYFBeOZx4GiCQ/75KLQKVacmJwV2eprb3tq6SsHE4WBMoFSTFuS8ttNK8PXW5u9KzuJjWZah6QMYsp5gDtZNwZo28/l7xgQg9U/tvJz2WPHGlHV9Ldbvcjh+wWohQSIefynL8mnwwd4ffLHbt2GqMAd9PVckSboOg+JDoU9OhqkACJ5lQXh9sL/faSzUvJRFsYfz+TxgglXqkqG1Ga83CJBYKt2E/o0gkSnQ7oc5Tm2DJ5dG/QXC1fB5nhDUfgAAAABJRU5ErkJggg==" InformativeScreenshot="ed0e4a0506abdf842483276b06a86da7.jpg" Selector="&lt;html app='msedge.exe' title='Login Staff Binus Enrichment' /&gt;" Url="https://enrichment.apps.binus.ac.id/Login/Staff/Login" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <ui:ForEachFileX sap2010:Annotation.AnnotationText="Menghapus semua raw file yang sudah ada di folder RawData" DisplayName="For Each File in Folder" Folder="RawData\Registrasi\NoTrack" sap:VirtualizedContainerService.HintSize="930,986" sap2010:WorkflowViewState.IdRef="ForEachFileX_5" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+        <ui:ForEachFileX.Body>
+          <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,705" sap2010:WorkflowViewState.IdRef="Sequence_31">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:FileExistsX DisplayName="File Exists" Exists="[fileExists]" sap:VirtualizedContainerService.HintSize="478,133" sap2010:WorkflowViewState.IdRef="FileExistsX_4" Path="[CurrentFile.FullName]" />
+              <If Condition="[fileExists = true]" sap:VirtualizedContainerService.HintSize="478,444" sap2010:WorkflowViewState.IdRef="If_4">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="400,168" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="358,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_4" Path="[CurrentFile.FullName]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachFileX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachFileX>
+      <ui:ForEachFileX sap2010:Annotation.AnnotationText="Memindahkan file yang ada di Download ke folder RawData" DisplayName="For Each File in Folder" Filter="*.xlsx" Folder="[downloadPathRegisNoTrack]" sap:VirtualizedContainerService.HintSize="930,593" sap2010:WorkflowViewState.IdRef="ForEachFileX_6" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+        <ui:ForEachFileX.Body>
+          <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,312" sap2010:WorkflowViewState.IdRef="Sequence_32">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="RawData\Registrasi\NoTrack" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="358,159" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[CurrentFile.FullName]" />
+              <ui:Break sap:VirtualizedContainerService.HintSize="358,25" sap2010:WorkflowViewState.IdRef="Break_2" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachFileX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachFileX>
+    </Sequence>
+  </Sequence>
+</Activity>
